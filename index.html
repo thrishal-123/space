@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Space Scene</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="#000033"></a-sky>
+
+      <a-sphere position="0 1.5 -5" radius="1.25" color="#AA4444">
+        <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+      </a-sphere>
+
+      <a-entity position="0 0 3.8">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <a-entity particle-system="preset: stars; particleCount: 1000; size: 0.1"></a-entity>
+    </a-scene>
+  </body>
+</html>
